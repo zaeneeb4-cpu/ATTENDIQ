@@ -1,23 +1,43 @@
 
 import streamlit as st
 
-# Page configuration
 st.set_page_config(
     page_title="ATTENDIQ",
     page_icon="📊",
     layout="wide"
 )
 
-# Main title
-st.title("ATTENDIQ")
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0B0F12;
+    color: white;
+}
 
-st.subheader("Student Attendance Analytics Dashboard")
+h1, h2, h3, p, label {
+    color: white !important;
+}
+
+[data-testid="stMetric"] {
+    background-color: #171F23;
+    border: 1px solid #176B68;
+    padding: 20px;
+    border-radius: 12px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.title("ATTENDIQ")
+st.caption("STUDENT ATTENDANCE ANALYTICS DASHBOARD")
+
+st.markdown("---")
+
+st.subheader("Welcome to ATTENDIQ")
 
 st.write(
-    "Turning Attendance Data into Academic Insights"
+    "Turning Attendance Data into Academic Insights."
 )
 
 st.info(
-    "Welcome to ATTENDIQ! "
     "Your platform for understanding student attendance."
 )
